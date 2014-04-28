@@ -7,15 +7,17 @@
 //
 
 #import "HostViewController.h"
-#import "ContentViewController.h"
 
-@interface HostViewController () <ViewPagerDataSource, ViewPagerDelegate>
-
-@property (nonatomic) NSUInteger numberOfTabs;
-
-@end
 
 @implementation HostViewController
+
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+	if (self){
+		
+	}
+	return self;
+}
 
 - (void)viewDidLoad {
     
@@ -25,7 +27,7 @@
     self.delegate = self;
     
     self.title = @"View Pager";
-    
+	
     // Keeps tab bar below navigation bar on iOS 7.0+
     // if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
     //     self.edgesForExtendedLayout = UIRectEdgeNone;
@@ -98,11 +100,12 @@
 
 - (UIViewController *)viewPager:(ViewPagerController *)viewPager contentViewControllerForTabAtIndex:(NSUInteger)index {
     
-    ContentViewController *cvc = [self.storyboard instantiateViewControllerWithIdentifier:@"contentViewController"];
+	GridImageViewController *viewController = [[GridImageViewController alloc] initWithNibName:@"GridImageViewController" bundle:nil] ;
+	viewController.tabNum = [NSString stringWithFormat:@"Content View #%i", index];
+		// cvc.labelString = [NSString stringWithFormat:@"Content View #%i", index];
     
-    cvc.labelString = [NSString stringWithFormat:@"Content View #%i", index];
-    
-    return cvc;
+		// get delegate
+    return viewController;
 }
 
 #pragma mark - ViewPagerDelegate

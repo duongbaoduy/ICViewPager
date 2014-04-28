@@ -9,7 +9,10 @@
 #import <QuartzCore/QuartzCore.h>
 
 #import "ViewPagerController.h"
+#import "GridImageViewController.h"
 
-@interface HostViewController : ViewPagerController
+@interface HostViewController : ViewPagerController <ViewPagerDataSource, ViewPagerDelegate>
+
+@property (nonatomic) NSUInteger numberOfTabs;
 
 @end

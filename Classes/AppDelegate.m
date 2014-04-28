@@ -10,10 +10,13 @@
 
 @implementation AppDelegate
 
+@synthesize window,navigationController = _navigationController;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    return YES;
+	NSLog(@"application didFinishLaunchingWithOptions");
+
+	return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

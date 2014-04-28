@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ContentViewController.h
 //  ICViewPager
 //
 //  Created by Ilter Cengiz on 28/08/2013.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface ContentViewController : UIViewController
 
-@property (strong, nonatomic) UIWindow *window;
+@property NSString *labelString;
 
 @end

@@ -18,7 +18,6 @@
     
     [super viewDidLoad];
     
-    _label.text = _labelString;
 }
 
 - (void)didReceiveMemoryWarning {

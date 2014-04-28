@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TabView.h"
 /**
  * Every option has a default value.
  * 
@@ -47,20 +47,53 @@ typedef NS_ENUM(NSUInteger, ViewPagerComponent) {
 @protocol ViewPagerDataSource;
 @protocol ViewPagerDelegate;
 
-@interface ViewPagerController : UIViewController
+@interface ViewPagerController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIScrollViewDelegate>
+
+	// Tab and content stuff
+@property (nonatomic,retain) UIScrollView *tabsView;
+@property (nonatomic,retain) UIView *contentView;
+
+@property (nonatomic,retain) UIPageViewController *pageViewController;
+@property (assign) id<UIScrollViewDelegate> actualDelegate;
+
+	// Tab and content cache
+@property (nonatomic,retain) NSMutableArray *tabs;
+@property (nonatomic,retain) NSMutableArray *contents;
+
+	// Options
+@property (nonatomic,retain) NSNumber *tabHeight;
+@property (nonatomic,retain) NSNumber *tabOffset;
+@property (nonatomic,retain) NSNumber *tabWidth;
+@property (nonatomic,retain) NSNumber *tabLocation;
+@property (nonatomic,retain) NSNumber *startFromSecondTab;
+@property (nonatomic,retain) NSNumber *centerCurrentTab;
+@property (nonatomic,retain) NSNumber *fixFormerTabsPositions;
+@property (nonatomic,retain) NSNumber *fixLatterTabsPositions;
+
+@property (nonatomic, assign) NSUInteger tabCount;
+@property (nonatomic, assign) NSUInteger activeTabIndex;
+@property (nonatomic, assign) NSUInteger activeContentIndex;
+
+@property (getter = isAnimatingToTab, assign) BOOL animatingToTab;
+@property (getter = isDefaultSetupDone, assign) BOOL defaultSetupDone;
+
+	// Colors
+@property (nonatomic,retain) UIColor *indicatorColor;
+@property (nonatomic,retain) UIColor *tabsViewBackgroundColor;
+@property (nonatomic,retain) UIColor *contentViewBackgroundColor;
 
 /**
  * The object that acts as the data source of the receiving viewPager
  * @discussion The data source must adopt the ViewPagerDataSource protocol. The data source is not retained.
  */
-@property (weak) id <ViewPagerDataSource> dataSource;
+@property (nonatomic, assign) id <ViewPagerDataSource> dataSource;
 /**
  * The object that acts as the delegate of the receiving viewPager
  * @discussion The delegate must adopt the ViewPagerDelegate protocol. The delegate is not retained.
  */
-@property (weak) id <ViewPagerDelegate> delegate;
+@property (nonatomic, assign) id <ViewPagerDelegate> delegate;
 
-#pragma mark Methods
+#pragma mark - Methods
 /**
  * Reloads all tabs and contents
  */
