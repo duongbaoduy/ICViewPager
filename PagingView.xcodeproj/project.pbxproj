@@ -18,6 +18,7 @@
 		CC24FB17190E609700CDC9A0 /* PageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC24FB12190E609700CDC9A0 /* PageView.xib */; };
 		CC24FB18190E609700CDC9A0 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC24FB14190E609700CDC9A0 /* PageViewController.m */; };
 		CC24FB1B190E619B00CDC9A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC24FB1A190E619B00CDC9A0 /* AppDelegate.m */; };
+		CCD41AD0190F555E00A57CB1 /* WaveLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD41ACF190F555E00A57CB1 /* WaveLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		CC24FB14190E609700CDC9A0 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		CC24FB19190E619B00CDC9A0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC24FB1A190E619B00CDC9A0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CCD41ACE190F555E00A57CB1 /* WaveLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveLayout.h; sourceTree = "<group>"; };
+		CCD41ACF190F555E00A57CB1 /* WaveLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				CC24FB11190E609700CDC9A0 /* PageScrollViewController.m */,
 				CC24FB13190E609700CDC9A0 /* PageViewController.h */,
 				CC24FB14190E609700CDC9A0 /* PageViewController.m */,
+				CCD41ACE190F555E00A57CB1 /* WaveLayout.h */,
+				CCD41ACF190F555E00A57CB1 /* WaveLayout.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC24FB1B190E619B00CDC9A0 /* AppDelegate.m in Sources */,
+				CCD41AD0190F555E00A57CB1 /* WaveLayout.m in Sources */,
 				CC24FB16190E609700CDC9A0 /* PageScrollViewController.m in Sources */,
 				CC24FAF5190DFF7D00CDC9A0 /* main.m in Sources */,
 				CC24FB18190E609700CDC9A0 /* PageViewController.m in Sources */,

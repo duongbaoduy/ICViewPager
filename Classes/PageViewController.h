@@ -10,6 +10,17 @@
 
 @interface PageViewController : UIViewController <UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>{
 	IBOutlet  UICollectionView *_collectionView;
+//	NSMutableArray *images;
+//	/*!
+//     operation queue for downloading images in background
+//     */
+//    NSOperationQueue *imageLoaderOpQueue;
 }
+
+@property (nonatomic, retain) NSMutableArray *images;
+@property (nonatomic, retain) NSMutableArray *imageQueue;
+@property (nonatomic, retain) NSOperationQueue *imageLoaderOpQueue;
+
+
 
 @end

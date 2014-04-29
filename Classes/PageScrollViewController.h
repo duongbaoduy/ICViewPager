@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PageScrollViewController : UIViewController <UIScrollViewDelegate> {
+@interface PageScrollViewController : UIViewController <UIScrollViewDelegate,UIGestureRecognizerDelegate> {
 	IBOutlet UIScrollView *uiScrollView;
+	NSMutableArray *tabController;
 }
 
 @end
